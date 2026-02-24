@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TyperRK</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            border: none;
+            padding: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px 0px black;
+            display: block;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+        button:active{
+            background-color: aqua;
+            box-shadow: none;
+        }
+        #typedAnswer {
+            display: none;
+            margin: auto;
+            width: 80%;
+            height: 400px;
+            font-size: 24px;
+        }
+        #questionText{
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: 200px;
+            font-size: 24px;
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Welcome to TyperRK</h1>
+    <p id="wpm"></p>
+    <p id="wcc"></p>
+    <div>
+        <button id="start">Start typing</button>
+    </div>
+
+    <textarea id="questionText" placeholder="Enter your TypingText you want here..." draggable="false"></textarea>    
+    <textarea id="typedAnswer" placeholder="Start typing here..." draggable="false"></textarea>    
+
+    <script src="Typing.js"></script>
+</body>
+</html>
