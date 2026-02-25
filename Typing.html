@@ -37,6 +37,30 @@
             height: 200px;
             font-size: 24px;
         }
+        #historyContainer {
+            display: none;
+            width: 90%;
+            margin: 20px auto;
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 20px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .historyItem {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+        }
+        .historyItem p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .historyItem strong {
+            color: #333;
+        }
     </style>
     
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
@@ -47,11 +71,18 @@
     <p id="wcc"></p>
     <div>
         <button id="start">Start typing</button>
+        <button id="viewHistory">View History</button>
+    </div>
+
+    <div id="historyContainer">
+        <h2>Typing History</h2>
+        <div id="historyList"></div>
     </div>
 
     <textarea id="questionText" placeholder="Enter your TypingText you want here..." draggable="false"></textarea>    
     <textarea id="typedAnswer" placeholder="Start typing here..." draggable="false"></textarea>    
 
     <script src="Typing.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
